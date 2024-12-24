@@ -1,0 +1,18 @@
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.0">
+    <persistence-unit name="northwind-persistence-unit" transaction-type="RESOURCE_LOCAL">
+        <class>meizin.ltd.ToLearnHibernate.Product</class>
+        <properties>
+            <!-- JDBC Connection Properties -->
+            <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver" />
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://123.123.123.123:5432/northwind" />
+            <property name="jakarta.persistence.jdbc.user" value="myuser" />
+            <property name="jakarta.persistence.jdbc.password" value="mypassword" />
+
+            <!-- Hibernate Properties -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+            <property name="hibernate.show_sql" value="true" />
+            <!-- <property name="hibernate.format_sql" value="true" /> -->
+            <!-- <property name="hibernate.hbm2ddl.auto" value="update" /> -->
+        </properties>
+    </persistence-unit>
+</persistence>
