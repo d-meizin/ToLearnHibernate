@@ -16,7 +16,7 @@ public class MainApp {
     private void createAndShowGUI() {
         JFrame frame = new JFrame("Product Management");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(400, 300);
+        frame.setSize(400, 200);
         frame.setLayout(new GridLayout(6, 2));
 
         JLabel lblProductId = new JLabel("Product ID:");
