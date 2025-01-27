@@ -5,11 +5,11 @@ import jakarta.persistence.EntityManager;
 
 public class ProductServiceNew {
 	
-	public ProductNew getProductById(Short productId) {
+	public ProductNew getEmployeeById(Short employeeId) {
         EntityManager em = HibernateUtilNew.getEntityManagerFactory().createEntityManager();
         ProductNew product = null;
         try {
-            product = em.find(ProductNew.class, productId);
+            product = em.find(ProductNew.class, employeeId);
         } finally {
             em.close();
         }

@@ -3,29 +3,29 @@ package meizin.ltd.NewTable;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "products_copy")
+@Table(name = "employhiber")
 public class ProductNew {
 	
 	@Id
-    @Column(name = "product_id")
-    private Short productId;
+    @Column(name = "employee_id")
+    private Short employeeId;
 
-    @Column(name = "product_name", length = 40)
+    @Column(name = "last_name", length = 20)
     private String productName;
 
-    @Column(name = "quantity_per_unit", length = 20)
+    @Column(name = "first_name", length = 10)
     private String quantityPerUnit;
 
-    @Column(name = "unit_price")
+    @Column(name = "title", length = 30)
     private Float unitPrice;
 
     // Getters and Setters
-    public Short getProductId() {
-        return productId;
+    public Short getEmployeeId() {
+        return employeeId;
     }
 
-    public void setProductId(Short productId) {
-        this.productId = productId;
+    public void setEmployeeId(Short employeeId) {
+        this.employeeId = employeeId;
     }
 
     public String getProductName() {

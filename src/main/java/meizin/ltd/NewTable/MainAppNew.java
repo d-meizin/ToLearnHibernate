@@ -25,8 +25,8 @@ public class MainAppNew {
         frame.setTitle("meizin\uD83D\uDE38 for my Kirill");
         frame.setLayout(new GridLayout(6, 2));
         
-        JLabel lblProductId = new JLabel("Product ID:");
-        JTextField txtProductId = new JTextField();
+        JLabel lblEmployeeId = new JLabel("Employee ID:");
+        JTextField txtEmployeeId = new JTextField();
 
         JLabel lblProductName = new JLabel("Product Name:");
         JTextField txtProductName = new JTextField();
@@ -41,8 +41,8 @@ public class MainAppNew {
         JButton btnWrite = new JButton("Write");
         JButton btnExecute = new JButton("Execute");
 
-        frame.add(lblProductId);
-        frame.add(txtProductId);
+        frame.add(lblEmployeeId);
+        frame.add(txtEmployeeId);
         frame.add(lblProductName);
         frame.add(txtProductName);
         frame.add(lblQuantityPerUnit);
@@ -58,7 +58,7 @@ public class MainAppNew {
 
         btnRead.addActionListener(e -> {
             actionState[0] = "READ";
-            JOptionPane.showMessageDialog(frame, "Enter Product ID and press Execute to read data.");
+            JOptionPane.showMessageDialog(frame, "Enter Employee ID and press Execute to read data.");
         });
 
         btnWrite.addActionListener(e -> {
@@ -69,25 +69,25 @@ public class MainAppNew {
         btnExecute.addActionListener(e -> {
             try {
                 if ("READ".equals(actionState[0])) {
-                    Short productId = Short.parseShort(txtProductId.getText());
-                    ProductNew product = productService.getProductById(productId);
+                    Short employeeId = Short.parseShort(txtEmployeeId.getText());
+                    ProductNew product = productService.getEmployeeById(employeeId);
 
                     if (product != null) {
                         txtProductName.setText(product.getProductName());
                         txtQuantityPerUnit.setText(product.getQuantityPerUnit());
                         txtUnitPrice.setText(String.valueOf(product.getUnitPrice()));
                     } else {
-                        JOptionPane.showMessageDialog(frame, "Product not found!");
+                        JOptionPane.showMessageDialog(frame, "Employee not found!");
                     }
                 } else if ("WRITE".equals(actionState[0])) {
                     ProductNew product = new ProductNew();
-                    product.setProductId(Short.parseShort(txtProductId.getText()));
+                    product.setEmployeeId(Short.parseShort(txtEmployeeId.getText()));
                     product.setProductName(txtProductName.getText());
                     product.setQuantityPerUnit(txtQuantityPerUnit.getText());
                     product.setUnitPrice(Float.parseFloat(txtUnitPrice.getText()));
 
                     productService.saveOrUpdateProduct(product);
-                    JOptionPane.showMessageDialog(frame, "Product saved successfully!");
+                    JOptionPane.showMessageDialog(frame, "Employee saved successfully!");
                 } else {
                     JOptionPane.showMessageDialog(frame, "No action selected!");
                 }
