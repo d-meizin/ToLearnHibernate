@@ -1,12 +1,12 @@
-package meizin.ltd.ToLearnHibernate;
+package meizin.ltd.NewTable;
 
-/* import jakarta.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "products_copy")
-public class Product {
-
-    @Id
+public class ProductNew {
+	
+	@Id
     @Column(name = "product_id")
     private Short productId;
 
@@ -51,5 +51,5 @@ public class Product {
     public void setUnitPrice(Float unitPrice) {
         this.unitPrice = unitPrice;
     }
+
 }
-*/

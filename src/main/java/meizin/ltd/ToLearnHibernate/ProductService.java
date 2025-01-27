@@ -1,6 +1,6 @@
 package meizin.ltd.ToLearnHibernate;
 
-import jakarta.persistence.EntityManager;
+/*  import jakarta.persistence.EntityManager;
 
 public class ProductService {
 
@@ -31,3 +31,4 @@ public class ProductService {
         }
     }
 }
+*/

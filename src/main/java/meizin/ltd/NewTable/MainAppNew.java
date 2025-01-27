@@ -1,16 +1,21 @@
-package meizin.ltd.ToLearnHibernate;
+package meizin.ltd.NewTable;
 
-/* import javax.swing.*;
+import javax.swing.*;
+
+//import meizin.ltd.ToLearnHibernate.MainApp;
+//import meizin.ltd.ToLearnHibernate.Product;
+//import meizin.ltd.ToLearnHibernate.ProductService;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class MainApp {
-
-    private final ProductService productService = new ProductService();
+public class MainAppNew {
+	
+	private final ProductServiceNew productService = new ProductServiceNew();
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new MainApp().createAndShowGUI());
+        SwingUtilities.invokeLater(() -> new MainAppNew().createAndShowGUI());
     }
 
     private void createAndShowGUI() {
@@ -65,7 +70,7 @@ public class MainApp {
             try {
                 if ("READ".equals(actionState[0])) {
                     Short productId = Short.parseShort(txtProductId.getText());
-                    Product product = productService.getProductById(productId);
+                    ProductNew product = productService.getProductById(productId);
 
                     if (product != null) {
                         txtProductName.setText(product.getProductName());
@@ -75,7 +80,7 @@ public class MainApp {
                         JOptionPane.showMessageDialog(frame, "Product not found!");
                     }
                 } else if ("WRITE".equals(actionState[0])) {
-                    Product product = new Product();
+                    ProductNew product = new ProductNew();
                     product.setProductId(Short.parseShort(txtProductId.getText()));
                     product.setProductName(txtProductName.getText());
                     product.setQuantityPerUnit(txtQuantityPerUnit.getText());
@@ -93,5 +98,5 @@ public class MainApp {
 
         frame.setVisible(true);
     }
+
 }
-*/

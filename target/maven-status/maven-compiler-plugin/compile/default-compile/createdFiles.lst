@@ -1,4 +1,4 @@
-meizin/ltd/ToLearnHibernate/Product.class
-meizin/ltd/ToLearnHibernate/MainApp.class
-meizin/ltd/ToLearnHibernate/HibernateUtil.class
-meizin/ltd/ToLearnHibernate/ProductService.class
+meizin\ltd\NewTable\ProductNew.class
+meizin\ltd\NewTable\HibernateUtilNew.class
+meizin\ltd\NewTable\ProductServiceNew.class
+meizin\ltd\NewTable\MainAppNew.class

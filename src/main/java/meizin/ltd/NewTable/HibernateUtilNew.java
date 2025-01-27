@@ -1,11 +1,11 @@
-package meizin.ltd.ToLearnHibernate;
+package meizin.ltd.NewTable;
 
-/*  import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 
-public class HibernateUtil {
-
-    private static final EntityManagerFactory ENTITY_MANAGER_FACTORY;
+public class HibernateUtilNew {
+	
+	private static final EntityManagerFactory ENTITY_MANAGER_FACTORY;
 
     static {
         ENTITY_MANAGER_FACTORY = Persistence.createEntityManagerFactory("northwind-persistence-unit");
@@ -20,5 +20,5 @@ public class HibernateUtil {
             ENTITY_MANAGER_FACTORY.close();
         }
     }
+
 }
-*/
