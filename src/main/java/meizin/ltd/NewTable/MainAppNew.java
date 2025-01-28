@@ -28,14 +28,14 @@ public class MainAppNew {
         JLabel lblEmployeeId = new JLabel("Employee ID:");
         JTextField txtEmployeeId = new JTextField();
 
-        JLabel lblProductName = new JLabel("Product Name:");
-        JTextField txtProductName = new JTextField();
+        JLabel lblLastName = new JLabel("Last Name:");
+        JTextField txtLastName = new JTextField();
 
-        JLabel lblQuantityPerUnit = new JLabel("Quantity Per Unit:");
-        JTextField txtQuantityPerUnit = new JTextField();
+        JLabel lblFirstName = new JLabel("First Name:");
+        JTextField txtFirstName = new JTextField();
 
-        JLabel lblUnitPrice = new JLabel("Unit Price:");
-        JTextField txtUnitPrice = new JTextField();
+        JLabel lblTitle = new JLabel("Title:");
+        JTextField txtTitle = new JTextField();
 
         JButton btnRead = new JButton("Read");
         JButton btnWrite = new JButton("Write");
@@ -43,12 +43,12 @@ public class MainAppNew {
 
         frame.add(lblEmployeeId);
         frame.add(txtEmployeeId);
-        frame.add(lblProductName);
-        frame.add(txtProductName);
-        frame.add(lblQuantityPerUnit);
-        frame.add(txtQuantityPerUnit);
-        frame.add(lblUnitPrice);
-        frame.add(txtUnitPrice);
+        frame.add(lblLastName);
+        frame.add(txtLastName);
+        frame.add(lblFirstName);
+        frame.add(txtFirstName);
+        frame.add(lblTitle);
+        frame.add(txtTitle);
         frame.add(btnRead);
         frame.add(btnWrite);
         frame.add(btnExecute);
@@ -73,19 +73,20 @@ public class MainAppNew {
                     ProductNew product = productService.getEmployeeById(employeeId);
 
                     if (product != null) {
-                        txtProductName.setText(product.getProductName());
-                        txtQuantityPerUnit.setText(product.getQuantityPerUnit());
-                        txtUnitPrice.setText(String.valueOf(product.getUnitPrice()));
+                        txtLastName.setText(product.getLastName());
+                        txtFirstName.setText(product.getFirstName());
+                        //txtUnitPrice.setText(String.valueOf(product.getUnitPrice()));
+                        txtTitle.setText(product.getTitle());
                     } else {
                         JOptionPane.showMessageDialog(frame, "Employee not found!");
                     }
                 } else if ("WRITE".equals(actionState[0])) {
                     ProductNew product = new ProductNew();
                     product.setEmployeeId(Short.parseShort(txtEmployeeId.getText()));
-                    product.setProductName(txtProductName.getText());
-                    product.setQuantityPerUnit(txtQuantityPerUnit.getText());
-                    product.setUnitPrice(Float.parseFloat(txtUnitPrice.getText()));
-
+                    product.setLastName(txtLastName.getText());
+                    product.setFirstName(txtFirstName.getText());
+                    //product.setUnitPrice(Float.parseFloat(txtUnitPrice.getText()));
+                    product.setTitle(txtTitle.getText());
                     productService.saveOrUpdateProduct(product);
                     JOptionPane.showMessageDialog(frame, "Employee saved successfully!");
                 } else {

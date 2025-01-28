@@ -11,13 +11,13 @@ public class ProductNew {
     private Short employeeId;
 
     @Column(name = "last_name", length = 20)
-    private String productName;
+    private String lastName;
 
     @Column(name = "first_name", length = 10)
-    private String quantityPerUnit;
+    private String firstName;
 
     @Column(name = "title", length = 30)
-    private Float unitPrice;
+    private String title;
 
     // Getters and Setters
     public Short getEmployeeId() {
@@ -28,28 +28,28 @@ public class ProductNew {
         this.employeeId = employeeId;
     }
 
-    public String getProductName() {
-        return productName;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    public String getQuantityPerUnit() {
-        return quantityPerUnit;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setQuantityPerUnit(String quantityPerUnit) {
-        this.quantityPerUnit = quantityPerUnit;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public Float getUnitPrice() {
-        return unitPrice;
+    public String getTitle() {
+        return title;
     }
 
-    public void setUnitPrice(Float unitPrice) {
-        this.unitPrice = unitPrice;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
 }
