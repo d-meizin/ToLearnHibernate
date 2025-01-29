@@ -1,6 +1,7 @@
 package meizin.ltd.NewTable;
 
 import javax.swing.*;
+import java.sql.Date;
 
 //import meizin.ltd.ToLearnHibernate.MainApp;
 //import meizin.ltd.ToLearnHibernate.Product;
@@ -36,6 +37,9 @@ public class MainAppNew {
 
         JLabel lblTitle = new JLabel("Title:");
         JTextField txtTitle = new JTextField();
+        
+        JLabel lblBirthDate = new JLabel("Birth Date:");
+        JTextField txtBirthDate = new JTextField();
 
         JButton btnRead = new JButton("Read");
         JButton btnWrite = new JButton("Write");
@@ -49,6 +53,8 @@ public class MainAppNew {
         frame.add(txtFirstName);
         frame.add(lblTitle);
         frame.add(txtTitle);
+        frame.add(lblBirthDate);
+        frame.add(txtBirthDate);
         frame.add(btnRead);
         frame.add(btnWrite);
         frame.add(btnExecute);
@@ -77,6 +83,7 @@ public class MainAppNew {
                         txtFirstName.setText(product.getFirstName());
                         //txtUnitPrice.setText(String.valueOf(product.getUnitPrice()));
                         txtTitle.setText(product.getTitle());
+                        txtBirthDate.setText(String.valueOf(product.getBirthDate()));
                     } else {
                         JOptionPane.showMessageDialog(frame, "Employee not found!");
                     }
@@ -87,6 +94,7 @@ public class MainAppNew {
                     product.setFirstName(txtFirstName.getText());
                     //product.setUnitPrice(Float.parseFloat(txtUnitPrice.getText()));
                     product.setTitle(txtTitle.getText());
+                    product.setBirthDate(Date.parseDate(txtBirthDate.getText()));
                     productService.saveOrUpdateProduct(product);
                     JOptionPane.showMessageDialog(frame, "Employee saved successfully!");
                 } else {

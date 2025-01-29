@@ -1,6 +1,7 @@
 package meizin.ltd.NewTable;
 
 import jakarta.persistence.*;
+import java.sql.Date;
 
 @Entity
 @Table(name = "employhiber")
@@ -15,9 +16,12 @@ public class ProductNew {
 
     @Column(name = "first_name", length = 10)
     private String firstName;
-
+    
     @Column(name = "title", length = 30)
     private String title;
+
+    @Column(name = "birth_date")
+    private Date birthDate;
 
     // Getters and Setters
     public Short getEmployeeId() {
@@ -50,6 +54,14 @@ public class ProductNew {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+    
+    public Date getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
     }
 
 }
