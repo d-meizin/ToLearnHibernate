@@ -22,7 +22,7 @@ public class MainAppNew {
     private void createAndShowGUI() {
         JFrame frame = new JFrame("Product Management");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(600, 400);
+        frame.setSize(800, 400);
         frame.setTitle("meizin\uD83D\uDE38 for my Kirill");
         frame.setLayout(new GridLayout(6, 2));
         
@@ -94,7 +94,7 @@ public class MainAppNew {
                     product.setFirstName(txtFirstName.getText());
                     //product.setUnitPrice(Float.parseFloat(txtUnitPrice.getText()));
                     product.setTitle(txtTitle.getText());
-                    product.setBirthDate(Date.parseDate(txtBirthDate.getText()));
+                    product.setBirthDate(Date.valueOf(txtBirthDate.getText()));
                     productService.saveOrUpdateProduct(product);
                     JOptionPane.showMessageDialog(frame, "Employee saved successfully!");
                 } else {
