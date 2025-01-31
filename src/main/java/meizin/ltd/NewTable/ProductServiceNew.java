@@ -1,6 +1,6 @@
 package meizin.ltd.NewTable;
 
-import jakarta.persistence.EntityManager;
+/* import jakarta.persistence.EntityManager;
 //import meizin.ltd.ToLearnHibernate.Product;
 
 public class ProductServiceNew {
@@ -32,3 +32,4 @@ public class ProductServiceNew {
         }
     }
 }
+*/

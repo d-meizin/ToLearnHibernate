@@ -1,6 +1,6 @@
 package meizin.ltd.NewTable;
 
-import javax.swing.*;
+/* import javax.swing.*;
 import java.sql.Date;
 
 //import meizin.ltd.ToLearnHibernate.MainApp;
@@ -109,3 +109,4 @@ public class MainAppNew {
     }
 
 }
+*/

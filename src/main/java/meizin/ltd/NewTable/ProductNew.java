@@ -1,6 +1,6 @@
 package meizin.ltd.NewTable;
 
-import jakarta.persistence.*;
+/* import jakarta.persistence.*;
 import java.sql.Date;
 
 @Entity
@@ -65,3 +65,4 @@ public class ProductNew {
     }
 
 }
+*/

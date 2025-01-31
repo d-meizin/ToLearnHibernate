@@ -1,6 +1,6 @@
 <persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.0">
     <persistence-unit name="northwind-persistence-unit" transaction-type="RESOURCE_LOCAL">
-        <class>meizin.ltd.NewTable.ProductNew</class>
+        <class>meizin.ltd.Music.MusicTables</class>
         <properties>
             <!-- JDBC Connection Properties -->
             <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver" />
