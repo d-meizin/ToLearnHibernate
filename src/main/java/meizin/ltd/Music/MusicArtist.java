@@ -8,8 +8,8 @@ public class MusicArtist {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = artist_id)
-	private long id;
+	@Column(name = "artist_id")
+	private Long artistId;
 	
 	@Column(name = "first_name")
 	private String firstName;
@@ -20,18 +20,70 @@ public class MusicArtist {
 	@Column(name = "age")
 	private int age;
 	
-	@Column(name = "band_id")
-	private long bandId;
+	//@Column(name = "band_id")
+	//private Long bandId;
+	
+	@ManyToOne(cascade = CascadeType.PERSIST)
+	@JoinColumn(name = "band_id")
+	private MusicBand band;
 	
 	public MusicArtist() {	
 	}
 	
-	public MusicArtist(Srting firstName, String lastName, int age, long bandId) {
+	public MusicArtist(String firstName, String lastName, int age) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
-		this.bandId = bandId;
 	}
-
-
+	
+	// Getters and Setters
+	
+	public Long getArtistId() {
+		return artistId;
+	}
+	
+	public void setArtistId(Long artistId) {
+		this.artistId = artistId;
+	}
+	
+	public String getFirstName() {
+		return firstName;
+	}
+	
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	
+	public String getLastName() {
+		return lastName;
+	}
+	
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	
+	public int getAge() {
+		return age;
+	}
+	
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+	/*public long getBandId() {
+		return bandId;
+	}
+	
+	public void setBandId(long bandId) {
+		this.bandId = bandId;
+	}*/
+	
+	public MusicBand getBand() {
+		return band;
+	}
+	
+	public void setBand(MusicBand band) {
+		this.band = band;
+	}
+	
 }

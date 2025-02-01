@@ -1,4 +1,3 @@
-meizin\ltd\NewTable\ProductNew.class
-meizin\ltd\NewTable\HibernateUtilNew.class
-meizin\ltd\NewTable\ProductServiceNew.class
-meizin\ltd\NewTable\MainAppNew.class
+meizin/ltd/Music/MusicBand.class
+meizin/ltd/Music/MusicArtist.class
+meizin/ltd/Music/MusicTables.class
